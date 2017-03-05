@@ -1,0 +1,61 @@
+# Principal
+name: Fran Raga
+bio: Full-Stack GIS Open Source
+
+# Descripcion Twitter
+description: A blog about technology and stuff related
+
+# Boton externo
+external-image: false
+picture: assets/images/profile.jpg
+picture_about: assets/images/profile_about.jpg
+background: assets/images/background.png
+
+#Resumen CV
+#resume: true
+#resume_path: resume/cv.pdf
+#resume-external: true
+#resume-url: 
+
+url: https://all4gis.github.io/
+
+# Enable google analytics
+#analytics-google: 'UA-MYANALYTICS'
+ 
+# Redes Sociales
+twitter: fran_raga
+linkedin: franciscojoseragalopez
+github: All4Gis
+stackoverflow: 49538/francisco-raga
+email: franka1986@gmail.com
+ 
+# sitip
+width: large
+ 
+# Proyectos
+#projects: true
+
+# Sobre mi
+about: true
+
+#  read time en los post
+#read-time: true
+
+#  tags en los posts  
+#show-tags: true
+
+# Display links for next and previous posts for the specified categories
+#post-advance-links: [blog]
+
+# Mostrar autor
+show-author: true
+
+# animaciones?
+animation: true
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-gist
+
+jekyll-mentions:
+    base_url: https://github.com
