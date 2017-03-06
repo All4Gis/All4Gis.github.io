@@ -11,7 +11,7 @@ Los pasos para crear una sitio web de Github partiendo de cero y empleando un te
 
 	[Templates](https://github.com/jekyll/jekyll/wiki/Themes)
 
-Nos descargamos el que mas nos guste y empezamos,(**Tested in Widows 10**)
+Nos descargamos el que más nos guste y empezamos,(**Tested in Windows 10**)
  
 
  - Instalamos Ruby y el pack DevKit
