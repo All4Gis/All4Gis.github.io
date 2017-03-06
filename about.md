@@ -5,16 +5,13 @@ layout: page
 ![Profile Image]({{ site.url }}/{{ site.picture_about }})
 
 <p>
-Mi nombre completo es Francisco José Raga López,pero mis amigos me llaman simplemente "Fran". <br/><br/>
+Mi nombre completo es Francisco José Raga López,pero mis amigos me llaman simplemente "Fran" y aunque soy Valenciano estoy afincado en Madrid desde hace años.<br/><br/>
 
 Soy Ingeniero en Cartografía y Geodesia por la Universidad Politécnica de Valencia y toda mi carrera la he enfocado al desarrollo tanto Gis for desktop como la parte WebGis.<br/><br/>
 
-Aunque soy Valenciano estoy afincado en Madrid desde hace años.<br/><br/>
+Actualmente trabajo para Defensa y Observación de la tierra como Full-Stack GIS Developer en proyectos tanto nacionales como internacionales.<br/><br/>
 
-Actualmente trabajo para Defensa y Observación de la tierra como Full-Stack GIS Developer en proyectos tanto nacionales como internacionales.(Si te cuento más,tendría que matarte) ;)<br/><br/>
-
-Tengo proyectos personales los cuales desarrollo como Freelance donde la gran mayoría son desarrollos para Qgis o WebGis y gran parte
-los comparto en redes como <A HREF = "https://github.com/All4Gis">Github</A>.<br/><br/>
+Tengo proyectos personales que desarrollo como Freelance. La gran mayoría son desarrollos para Qgis o WebGis y gran parte los comparto en redes como <A HREF = "https://github.com/All4Gis">Github</A>.<br/><br/>
 
 Por otro lado también imparto formación a empresas y particulares sobre desarrollo Open Source Gis.<br/><br/>
 
