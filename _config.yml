@@ -59,3 +59,5 @@ gems:
 
 jekyll-mentions:
     base_url: https://github.com
+    
+future: true
