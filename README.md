@@ -1,4 +1,4 @@
-**Pagina personal**
+# Pagina personal
 
 Vista previa de la web 2017: [LINK](https://all4gis.github.io/)
 
