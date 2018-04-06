@@ -9,7 +9,7 @@ Mi nombre completo es Francisco José Raga López,pero mis amigos me llaman simp
 
 Soy Ingeniero en Cartografía y Geodesia por la Universidad Politécnica de Valencia y toda mi carrera la he enfocado al desarrollo tanto Gis for desktop como la parte WebGis.<br/><br/>
 
-Actualmente trabajo para Defensa y Observación de la tierra como Full-Stack GIS Developer en proyectos tanto nacionales como internacionales.<br/><br/>
+Actualmente trabajo como Full-Stack GIS Developer en proyectos tanto nacionales como internacionales.<br/><br/>
 
 Tengo proyectos personales que desarrollo como Freelance. La gran mayoría son desarrollos para Qgis o WebGis y gran parte los comparto en redes como <A HREF = "https://github.com/All4Gis">Github</A>.<br/><br/>
 
