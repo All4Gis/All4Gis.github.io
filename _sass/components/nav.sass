@@ -1,46 +1,74 @@
-.nav,
-.nav-home
-    > .list
-        list-style: none
-        margin: 0
-        padding: 0 13px 0
+.site-nav
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 200
+	padding: 1.2rem 0
+	transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease
 
-        > .item
-            display: inline-block
+	&--light,
+	&.scrolled
+		background: rgba($white, 0.92)
+		backdrop-filter: blur(12px)
+		box-shadow: $shadow-sm
+		padding: 0.8rem 0
 
-        > .item > .link
-            display: inline-block
-            font-weight: 300
-            font-size: 1.4rem
-            padding: 20px 10px
-            text-decoration: none
+	> .inner
+		width: 92%
+		max-width: $max-width-wide
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: space-between
 
-.nav
-    position: absolute
-    right: 0
-    top: 0
+	> .inner > .brand
+		font-size: 1.5rem
+		font-weight: 700
+		color: $white
+		text-decoration: none
+		letter-spacing: -0.02em
+		transition: color 0.2s ease
 
-    > .list
-        padding: 0 13px 0
+		&:hover
+			color: rgba($white, 0.85)
 
-        > .item > .link
-            font-size: 1.4rem
-            padding: 20px 10px
+	> .inner > .list
+		list-style: none
+		margin: 0
+		padding: 0
+		display: flex
+		align-items: center
+		gap: 0.4rem
 
-.nav-home
-    margin-top: 40px
-    text-align: center
+	> .inner > .list > .item > .link
+		display: inline-block
+		font-size: 1.4rem
+		font-weight: 500
+		padding: 0.8rem 1.4rem
+		color: rgba($white, 0.9)
+		text-decoration: none
+		border-radius: $radius-full
+		transition: all 0.2s ease
 
-    > .list
-        padding: 0
+		&:hover, &.active
+			color: $white
+			background: rgba($white, 0.15)
 
-        > .item > .link
-            font-size: 2rem
-            padding: 7px 15px
-            margin: 0
-            border-radius: 4%
-            transition: all .4s ease-in-out
-            width: 95px
+	&--light,
+	&.scrolled
+		> .inner > .brand
+			color: $beta
 
-            &:hover
-                color: $alpha
+			&:hover
+				color: $delta
+
+		> .inner > .list > .item > .link
+			color: $slate-600
+
+			&:hover, &.active
+				color: $delta
+				background: rgba($teal, 0.08)
+
+.nav, .nav-home
+	display: none

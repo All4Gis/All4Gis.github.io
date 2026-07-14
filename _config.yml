@@ -1,63 +1,37 @@
-# Principal
+# Site
 name: Fran Raga
-bio: Full-Stack Open Source GIS Developer
+bio: Senior Geospatial Software Engineer
 
-# Descripcion Twitter
-description: All4Gis - Fran Raga
+# SEO
+description: Fran Raga — Senior Geospatial Software Engineer specializing in QGIS, Python, PostGIS and enterprise WebGIS. Open-source contributor, consultant and technical trainer.
 
-# Boton externo
+# Images
 external-image: false
-picture: assets/images/profile.jpg
-picture_about: assets/images/profile_about.jpg
-background: assets/images/background.png
-
-#Resumen CV
-#resume: true
-#resume_path: resume/cv.pdf
-#resume-external: true
-#resume-url: 
+picture: assets/images/profile.jpeg
 
 url: https://all4gis.github.io/
+lang: en
 
-# Enable google analytics
-#analytics-google: 'UA-MYANALYTICS'
- 
-# Redes Sociales
+# Social
 twitter: fran_raga
 linkedin: franraga
 github: All4Gis
 stackoverflow: 49538/francisco-raga
 email: franka1986@gmail.com
- 
-# sitip
+
+# Layout
 width: large
- 
-# Proyectos
-#projects: true
-
-# Sobre mi
 about: true
-
-#  read time en los post
-#read-time: true
-
-#  tags en los posts  
-#show-tags: true
-
-# Display links for next and previous posts for the specified categories
-#post-advance-links: [blog]
-
-# Mostrar autor
+projects: true
 show-author: true
-
-# animaciones?
 animation: true
 
-gems:
+# Plugins
+plugins:
   - jekyll-seo-tag
   - jekyll-gist
 
 jekyll-mentions:
-    base_url: https://github.com
-    
+  base_url: https://github.com
+
 future: true

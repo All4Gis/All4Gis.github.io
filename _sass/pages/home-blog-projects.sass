@@ -1,74 +1,207 @@
-.home,
-.blog,
-.projects
-    margin-top: 125px
+.home-section
+	padding: 5rem 0
 
-    > .list
-        border-top: 1px solid $epsilon
-        margin-top: 30px
-        padding-top: 40px
-        position: relative
+	&:first-of-type
+		padding-top: 2rem
 
-        &:before
-            display: block
-            content: " "
-            width: 7px
-            height: 7px
-            border: $epsilon 1px solid
-            position: absolute
-            top: -5px
-            left: 50%
-            margin-left: -5px
-            background: #FFF
-            box-shadow: #FFF 0 0 0 5px
-            border-radius: 3px
+.section-intro
+	text-align: center
 
-.home > .list,
-.blog > .list,
-.projects > .list
-    > .item
-        display: block
-        width: 95%
-        margin: 0 auto
+	> .intro-text
+		font-size: 1.8rem
+		line-height: 1.8
+		color: $slate-600
+		max-width: 68ch
+		margin: 0 auto
 
-    > .item > .url
-        width: 100%
-        display: block
-        padding: 20px 0
-        text-decoration: none
+.section-skills
+	.skills-grid
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+		gap: 2rem
 
-    > .item > .url > .title
-        margin: 0
-        width: 75%
-        font-weight: 500
-        transition: all ease-in-out .2s
+	.skill-category
+		background: $white
+		border: 1px solid $epsilon
+		border-radius: $radius-lg
+		padding: 2.4rem
+		transition: box-shadow 0.2s ease, transform 0.2s ease
 
-    > .item:hover > .url > .title
-        color: $delta
+		&:hover
+			box-shadow: $shadow-md
+			transform: translateY(-2px)
 
-    // maybe we can't nest html5 elements
-    // can you help me?
-    aside
-        position: relative
-        top: 2px
-        margin: 0
-        width: 25%
-        float: right
-        font-weight: 300
-        color: $gama
-        text-align: right
-        transition: all ease-in-out .2s
+		> .category-name
+			font-size: 1.4rem
+			font-weight: 700
+			color: $delta
+			text-transform: uppercase
+			letter-spacing: 0.06em
+			margin-bottom: 1.6rem
 
-    .item:hover .url aside
-        color: $alpha
+		> .skill-tags
+			display: flex
+			flex-wrap: wrap
+			gap: 0.6rem
+			list-style: none
+			padding: 0
+			margin: 0
 
-.blog > .list > .item > .url,
-.projects > .list > .item > .url
-    > .title
-        display: inline
+			> .tag
+				display: inline-block
+				padding: 0.5rem 1.2rem
+				font-size: 1.3rem
+				font-weight: 500
+				color: $slate-700
+				background: $slate-100
+				border-radius: $radius-full
+				line-height: 1.4
 
-    > .emoji
-        display: inline
-        position: relative
-        top: -4px
-        margin-right: 10px
+.section-projects
+	.projects-grid
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+		gap: 2rem
+
+	.project-card
+		background: $white
+		border: 1px solid $epsilon
+		border-radius: $radius-lg
+		padding: 2.4rem
+		display: flex
+		flex-direction: column
+		transition: all 0.25s ease
+		text-decoration: none
+		color: inherit
+
+		&:hover
+			border-color: rgba($teal, 0.4)
+			box-shadow: $shadow-lg
+			transform: translateY(-4px)
+
+			.project-title
+				color: $delta
+
+		> .project-title
+			font-size: 1.8rem
+			font-weight: 700
+			color: $beta
+			margin: 0 0 1rem
+			transition: color 0.2s ease
+
+		> .project-desc
+			font-size: 1.45rem
+			color: $slate-500
+			line-height: 1.6
+			flex: 1
+			margin-bottom: 1.6rem
+
+		> .project-tags
+			display: flex
+			flex-wrap: wrap
+			gap: 0.5rem
+			list-style: none
+			padding: 0
+			margin: 0
+
+			> .tag
+				font-size: 1.2rem
+				padding: 0.3rem 1rem
+				background: rgba($teal, 0.1)
+				color: $teal-dark
+				border-radius: $radius-full
+				font-weight: 500
+
+	.view-all
+		text-align: center
+		margin-top: 3.2rem
+
+		> .btn
+			display: inline-flex
+			align-items: center
+			gap: 0.6rem
+			padding: 1.2rem 2.8rem
+			font-size: 1.5rem
+			font-weight: 600
+			color: $white
+			background: $delta
+			border-radius: $radius-full
+			text-decoration: none
+			transition: all 0.2s ease
+
+			&:hover
+				background: $teal-light
+				color: $white
+				transform: translateY(-2px)
+				box-shadow: 0 8px 24px rgba($teal, 0.35)
+
+.section-contact
+	text-align: center
+	padding-bottom: 6rem
+
+	> .contact-box
+		background: linear-gradient(135deg, $slate-900, $slate-800)
+		border-radius: $radius-lg
+		padding: 4rem 3rem
+		color: $white
+
+		> .contact-title
+			font-size: 2.4rem
+			color: $white
+			margin-bottom: 1rem
+
+		> .contact-desc
+			font-size: 1.6rem
+			color: rgba($white, 0.75)
+			margin-bottom: 2.4rem
+
+		> .contact-email
+			display: inline-flex
+			align-items: center
+			gap: 0.6rem
+			padding: 1.2rem 2.4rem
+			font-size: 1.5rem
+			font-weight: 600
+			color: $slate-900
+			background: $white
+			border-radius: $radius-full
+			text-decoration: none
+			transition: all 0.2s ease
+
+			&:hover
+				transform: translateY(-2px)
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2)
+				color: $delta
+
+// Legacy list styles
+.home, .blog, .projects
+	margin-top: 0
+
+	> .list
+		border-top: 1px solid $epsilon
+		margin-top: 2rem
+		padding-top: 3rem
+
+	> .list > .item > .url
+		display: block
+		padding: 1.6rem 0
+		text-decoration: none
+		border-bottom: 1px solid $epsilon
+		transition: padding-left 0.2s ease
+
+		&:hover
+			padding-left: 0.8rem
+
+		> .title
+			font-size: 1.7rem
+			font-weight: 600
+			color: $beta
+			margin: 0
+
+		&:hover > .title
+			color: $delta
+
+	aside
+		float: right
+		font-size: 1.3rem
+		color: $gama

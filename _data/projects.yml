@@ -1,0 +1,23 @@
+- title: All4Gis
+  description: Main open-source hub — QGIS plugins, Python utilities and geospatial tooling accumulated over years of GIS development.
+  url: https://github.com/All4Gis
+  tags: [QGIS, Python, Open Source]
+  featured: true
+
+- title: QGIS Plugins
+  description: Production-grade QGIS extensions for workflow automation, spatial data processing and cartographic output.
+  url: https://github.com/All4Gis?q=qgis&type=repositories
+  tags: [PyQGIS, QGIS]
+  featured: true
+
+- title: WebGIS Applications
+  description: Custom and enterprise web mapping platforms built with Leaflet, OpenLayers and LuciadRIA for real-world deployments.
+  url: https://github.com/All4Gis
+  tags: [JavaScript, Leaflet, OpenLayers]
+  featured: true
+
+- title: Training & Resources
+  description: Workshop materials and resources for teams learning open-source GIS development — from QGIS scripting to WebGIS.
+  url: https://github.com/All4Gis
+  tags: [Training, GIS]
+  featured: false

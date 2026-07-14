@@ -1,12 +1,84 @@
 .page
-    margin-top: 125px
+	margin-top: 0
+	padding-top: 7rem
+	padding-bottom: 4rem
 
-    > h1
-        text-align: center
-        margin-bottom: 6rem
+.page-header
+	text-align: center
+	padding: 4rem 0 3rem
+	margin-bottom: 2rem
+
+	> .page-title
+		font-size: clamp(2.8rem, 5vw, 4rem)
+		margin-bottom: 1rem
+
+	> .page-subtitle
+		font-size: 1.7rem
+		color: $slate-500
+		max-width: 56ch
+		margin: 0 auto
 
 .about
-    img
-        width: 20%
-        margin: 0 auto
-        display: block
+	.about-grid
+		display: grid
+		grid-template-columns: 280px 1fr
+		gap: 4rem
+		align-items: start
+
+		@media #{$below}
+			grid-template-columns: 1fr
+			gap: 2.4rem
+
+	.about-image
+		img
+			width: 100%
+			border-radius: $radius-lg
+			box-shadow: $shadow-lg
+			display: block
+
+	.about-content
+		> p
+			font-size: 1.65rem
+			line-height: 1.8
+
+	.about-content h2
+		margin-top: 3.2rem
+		padding-top: 2.4rem
+		border-top: 1px solid $epsilon
+
+	.skill-list
+		display: flex
+		flex-wrap: wrap
+		gap: 0.8rem
+		list-style: none
+		padding: 0
+		margin: 0
+
+		> li
+			padding: 0.6rem 1.4rem
+			font-size: 1.4rem
+			font-weight: 500
+			color: $slate-700
+			background: $white
+			border: 1px solid $epsilon
+			border-radius: $radius-full
+			line-height: 1.4
+			transition: all 0.2s ease
+
+			&:hover
+				border-color: $delta
+				color: $delta
+				background: rgba($teal, 0.06)
+
+	// Hide default markdown image when using grid
+	> img:first-child
+		display: none
+
+	@media #{$below}
+		> img:first-child
+			display: block
+			width: 200px
+			margin: 0 auto 2rem
+
+		.about-grid
+			display: none

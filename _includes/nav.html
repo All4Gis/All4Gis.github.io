@@ -1,39 +1,20 @@
-<nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
-        {% if page.title != "Home" %}
+<nav class="site-nav{% if page.title != 'Home' %} site-nav--light{% endif %}" aria-label="Main navigation">
+    <div class="inner">
+        <a class="brand" href="{{ site.url }}/">{{ site.name }}</a>
+        <ul class="list">
             <li class="item">
-                <a class="link" href="{{ site.url }}/">Home</a>
+                <a class="link{% if page.title == 'Home' %} active{% endif %}" href="{{ site.url }}/">Home</a>
             </li>
-        {% endif %}
-
-<!--         {% if site.blog == true %} -->
-<!--             {% if page.title != "Blog" %} -->
-<!--                 <li class="item"> -->
-<!--                     <a class="link" href="{{ site.url }}/blog">Blog</a> -->
-<!--                 </li> -->
-<!--             {% endif %} -->
-<!--         {% endif %} -->
-
-<!--         {% if site.projects == true %} -->
-<!--             {% if page.title != "Projects" %} -->
-<!--                 <li class="item"> -->
-<!--                     <a class="link" href="{{ site.url }}/projects">Proyectos</a> -->
-<!--                 </li> -->
-<!--             {% endif %} -->
-<!--         {% endif %} -->
-
-        {% if site.about == true %}
-            {% if page.title != "About" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/about">Sobre m&iacute;</a>
-                </li>
+            {% if site.about %}
+            <li class="item">
+                <a class="link{% if page.title == 'About' %} active{% endif %}" href="{{ site.url }}/about">About</a>
+            </li>
             {% endif %}
-        {% endif %}
-
-        {% if site.resume == true %}
+            {% if site.projects %}
             <li class="item">
-                 <a class="link" href="{% if site.resume%}{{ site.resume_path }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Resumen</a>       
+                <a class="link{% if page.title == 'Projects' %} active{% endif %}" href="{{ site.url }}/projects">Projects</a>
             </li>
-        {% endif %}
-    </ul>
+            {% endif %}
+        </ul>
+    </div>
 </nav>

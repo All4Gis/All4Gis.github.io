@@ -2,38 +2,46 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture_about }})
+<div class="page-header">
+    <h1 class="page-title">About</h1>
+    <p class="page-subtitle">Senior Geospatial Software Engineer specializing in QGIS, Python, PostGIS and enterprise WebGIS — open-source contributor, consultant and technical trainer.</p>
+</div>
 
-<p>
-Mi nombre completo es Francisco José Raga López,pero mis amigos me llaman simplemente "Fran" y aunque soy Valenciano estoy afincado en Madrid desde hace años.<br/><br/>
+<div class="about-grid">
+    <div class="about-image">
+        <img src="{{ site.url }}/{{ site.picture }}" alt="{{ site.name }}" />
+    </div>
+    <div class="about-content">
+        <p>
+            I'm <strong>Francisco José Raga López</strong>, a Senior Geospatial Software Engineer with a
+            background in Cartography and Geodesy and a career dedicated to bridging geospatial engineering
+            and software development.
+        </p>
+        <p>
+            I hold a degree from the Universitat Politècnica de València and have spent my professional
+            life designing and delivering GIS solutions — from desktop workflows and QGIS plugin development
+            to large-scale WebGIS platforms and spatial data infrastructure. I work on national and
+            international projects, building reliable data pipelines, custom tooling and production-ready
+            mapping applications for organizations across the public and private sectors.
+        </p>
+        <p>
+            Under <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">All4Gis</a>,
+            I maintain an active open-source portfolio of QGIS plugins, Python libraries and WebGIS
+            components. I also provide freelance development, GIS consulting and hands-on technical training
+            for teams looking to adopt or advance their open-source geospatial capabilities.
+        </p>
+        <p>
+            I remain closely connected to the geospatial community, with a long-standing commitment to
+            open tools and to building software that delivers measurable value in real-world workflows.
+        </p>
+    </div>
+</div>
 
-Soy Ingeniero en Cartografía y Geodesia por la Universidad Politécnica de Valencia y toda mi carrera la he enfocado al desarrollo tanto Gis for desktop como la parte WebGis.<br/><br/>
-
-Actualmente trabajo como Full-Stack GIS Developer en proyectos tanto nacionales como internacionales.<br/><br/>
-
-Tengo proyectos personales que desarrollo como Freelance. La gran mayoría son desarrollos para Qgis o WebGis y gran parte los comparto en redes como <A HREF = "https://github.com/All4Gis">Github</A>.<br/><br/>
-
-Por otro lado también imparto formación a empresas y particulares sobre desarrollo Open Source Gis.<br/><br/>
-
-Soy un apasionado de la tecnología,del mundo Gis y un GeoInquieto en general,me encanta mi trabajo,poder investigar en lo que de verdad
-me gusta y poder hacer desarrollos que puedan ayudar a otras personas en su día a día.<br/><br/>
-</p>
-
-<h2>Habilidades</h2>
-
+<h2>Skills</h2>
 <ul class="skill-list">
-	<li>Gis</li>
-	<li>Python</li>
-	<li>Qgis</li>
-	<li>PyQgis</li>
-	<li>PyQt</li>
-	<li>Postgres/Postgis</li>
-	<li>HTML</li>
-	<li>LuciadRIA, leaflet, OL</li>
-	<li>CSS</li>
-	<li>.Net</li>
-	<li>Java</li>
-	<li>Javascript</li>
-	<li>Git</li>
-	<li>Linux</li>
+    {% for category in site.data.skills.categories %}
+        {% for skill in category.items %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    {% endfor %}
 </ul>

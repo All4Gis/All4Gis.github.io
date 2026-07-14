@@ -1,62 +1,94 @@
-# Pagina personal
+# All4Gis — Fran Raga
 
-Vista previa de la web 2017: [LINK](https://all4gis.github.io/)
+Personal website of **Fran Raga**, Senior Geospatial Software Engineer.
 
-![](sceenshot/captura.png?raw=true)
+Live site: [all4gis.github.io](https://all4gis.github.io/)
 
+Built with [Jekyll](https://jekyllrb.com/) and deployed via [GitHub Pages](https://pages.github.com/).
 
-Los pasos para crear una sitio web de Github partiendo de cero y empleando un template como base son:
+## About
 
- - Los templates disponibles son:
+Portfolio site showcasing GIS development work, open-source projects, skills and contact information. Originally based on the [Indigo](https://github.com/sergiokopplin/indigo) Jekyll theme, fully redesigned with a modern layout and updated stack.
 
-	[Templates](https://github.com/jekyll/jekyll/wiki/Themes)
+## Requirements
 
-Nos descargamos el que más nos guste y empezamos,(**Tested in Windows 10**)
- 
+- **Ruby 3.3.x** (GitHub Pages currently uses Ruby 3.3.4)
+- Bundler
 
- - Instalamos Ruby y el pack DevKit
+> macOS system Ruby (2.6) is **not supported**. Ruby 4.x is also incompatible with the `github-pages` gem at this time.
 
- [Ruby](https://rubyinstaller.org/downloads/)  
+### Install Ruby 3.3 (Homebrew)
 
-Nos dirigimos donde hemos instalado el paquete :
+```bash
+brew install ruby@3.3
 
-    devkit
+echo 'export PATH="$(brew --prefix ruby@3.3)/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 
-    ruby dk.rb init
+ruby --version   # should show 3.3.x
+gem install bundler
+```
 
-    ruby dk.rb install
+### Alternative: rbenv
 
- - Instalamos node.js
+```bash
+brew install rbenv ruby-build
+rbenv install 3.3.4
+cd All4Gis.github.io
+rbenv local 3.3.4   # uses .ruby-version
+gem install bundler
+```
 
- [Node.js](https://nodejs.org/es/download/)
+## Local preview
 
- - Instalamos Bundler desde consola:
- 
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-		gem install bundler
-    
- - Instalamos Jekyll desde consola:
+Open [http://localhost:4000](http://localhost:4000).
 
-		gem install jekyll
+Optional flags:
 
- - Vamos donde hemos instalado Jekyll y tecleamos:
+```bash
+bundle exec jekyll serve --livereload   # auto-refresh on changes
+bundle exec jekyll build                # generate _site/ only
+```
 
-		jekyll new myfirstsite
-		cd myfirstsite
-		jekyll serve
+## Project structure
 
-**Nota:**
-Si da el fallo de `github-pages x64-mingw32` es por el DevKit de Ruby una vez lo tengamos ,por si no lo instalamos anteriormente,ponemos
+| Path | Purpose |
+|------|---------|
+| `_config.yml` | Site settings, bio, social links, SEO |
+| `_data/projects.yml` | Featured projects |
+| `_data/skills.yml` | Technology categories |
+| `_includes/` | Reusable HTML partials (hero, nav, home sections) |
+| `_layouts/` | Page layouts |
+| `_sass/` | Stylesheets (Sass) |
+| `about.md` | About page content |
+| `projects.html` | Projects page |
+| `assets/images/` | Profile photo and site images |
 
-    bundle install
-    gem cleanup
-	
- - Arrancamos el servidor local
+## Customization
 
-		bundle exec jekyll serve --config _config.yml
+Edit `_config.yml` to update your name, bio, description and social profiles.
 
-Vamos a `http://localhost:4000/`  para ver la web
+Add or update projects in `_data/projects.yml`:
 
-Template empleado en esta web como base : [Template](https://github.com/sergiokopplin/indigo)
+```yaml
+- title: My Project
+  description: Short project description.
+  url: https://github.com/All4Gis/my-project
+  tags: [QGIS, Python]
+  featured: true
+```
 
-[© All4gis 2017]
+Update skill categories in `_data/skills.yml`.
+
+## Deployment
+
+Push to the `master` branch (or your GitHub Pages source branch). GitHub Pages builds the site automatically using the same `github-pages` gem pinned in the `Gemfile`.
+
+## License
+
+© Fran Raga

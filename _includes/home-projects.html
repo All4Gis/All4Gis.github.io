@@ -1,15 +1,11 @@
----
-layout: page
-title: Projects
----
-<div class="page-header">
-    <h1 class="page-title">Projects</h1>
-    <p class="page-subtitle">Open-source GIS tools, QGIS plugins and WebGIS applications built over years of professional development.</p>
-</div>
+<section class="home-section section-projects">
+    <span class="section-label">Open Source</span>
+    <h2 class="section-title">Featured work</h2>
+    <p class="section-desc">A selection of projects from years of GIS development — QGIS plugins, Python tooling and WebGIS applications shared on GitHub.</p>
 
-<section class="section-projects">
     <div class="projects-grid">
         {% for project in site.data.projects %}
+        {% if project.featured %}
         <a class="project-card" href="{{ project.url }}" target="_blank" rel="noopener">
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-desc">{{ project.description }}</p>
@@ -19,10 +15,11 @@ title: Projects
                 {% endfor %}
             </ul>
         </a>
+        {% endif %}
         {% endfor %}
     </div>
 
     <div class="view-all">
-        <a class="btn" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">Browse all repositories on GitHub →</a>
+        <a class="btn" href="{{ site.url }}/projects">View all projects →</a>
     </div>
 </section>

@@ -5,27 +5,31 @@
 %}{% assign showHeader = true %}{% endif %}
 
 {% if showHeader == true %}
-    	<header class="header-home {% if site.animation %}animated{% endif %}" style="background-image:url('{{ site.url }}/{{ site.background }}')">
-     	 
-        {% if site.about %}       
-            <a class="link" href="{{ site.url }}/about">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-            </a>
+<section class="hero{% if site.animation %} animated{% endif %}">
+    <div class="bg-texture" style="background-image: url('{{ site.url }}/assets/images/background.png');" aria-hidden="true"></div>
+    <div class="content">
+        {% if site.about %}
+        <a class="avatar-link" href="{{ site.url }}/about">
+            <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" width="140" height="140" />
+        </a>
         {% else %}
-            <span class="link">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-            </span>
+        <span class="avatar-link">
+            <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" width="140" height="140" />
+        </span>
         {% endif %}
-        
-          
-         
-        
 
         <h1 class="title">{{ site.name }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
+        <p class="description">{{ site.bio }}</p>
+        {% if site.tagline %}
+        <p class="tagline">{{ site.tagline }}</p>
+        {% endif %}
+
+        <div class="cta-group">
+            <a class="btn btn-primary" href="{{ site.url }}/about">About me</a>
+            <a class="btn btn-ghost" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+        </div>
 
         {% include social-links.html %}
-    </header>
+    </div>
+</section>
 {% endif %}
-
-{% include nav.html %}

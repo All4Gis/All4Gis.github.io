@@ -1,0 +1,18 @@
+<section class="home-section section-skills">
+    <span class="section-label">Stack</span>
+    <h2 class="section-title">Technologies</h2>
+    <p class="section-desc">The tools and languages I use to design, build and ship geospatial software at scale.</p>
+
+    <div class="skills-grid">
+        {% for category in site.data.skills.categories %}
+        <div class="skill-category">
+            <h3 class="category-name">{{ category.name }}</h3>
+            <ul class="skill-tags">
+                {% for skill in category.items %}
+                <li class="tag">{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</section>

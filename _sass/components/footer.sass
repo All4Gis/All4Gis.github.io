@@ -1,59 +1,43 @@
 .footer-main
-    border-top: 1px solid $epsilon
-    padding: 40px 0
-    margin: 40px 0 0
-    font-size: 1.3rem
-    color: $gama
-    font-weight: 300
-    text-align: center
-    position: relative
+	border-top: 1px solid $epsilon
+	padding: 3.2rem 0
+	margin-top: 2rem
+	font-size: 1.4rem
+	color: $slate-500
+	text-align: center
 
-    &:before
-        display: block
-        content: " "
-        width: 7px
-        height: 7px
-        border: $epsilon 1px solid
-        position: absolute
-        top: -5px
-        left: 50%
-        margin-left: -5px
-        background: #FFF
-        box-shadow: #FFF 0 0 0 5px
-        border-radius: 3px
+	> .footer-inner
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 1.2rem
 
-    > .link
-        display: inline
+	> .footer-inner > .copyright
+		font-weight: 500
+		color: $slate-600
 
-        > .icon
-            width: 15px !important
-            fill: $gama !important
-            transition: ease-in-out all .3s
-            position: relative
-            top: 3px
-            display: inherit
-            margin: 0
+	> .footer-inner > .quote
+		font-style: italic
+		color: $slate-400
+		max-width: 48ch
+		line-height: 1.6
 
-            &:hover
-                fill: $delta !important
+		> .author
+			font-style: normal
+			color: $slate-500
+			text-decoration: none
+			border-bottom: 1px solid transparent
+			transition: border-color 0.2s ease
 
-    > .extra
-        color: $gama
-        margin-top: 0
-        
-        > .cita
-            color: $beta
-            text-decoration: none
-            border-bottom: 1px solid transparent
-            transition: ease-in-out all .3s
-            padding-bottom: 1px
-            
-        > .link
-            color: $beta
-            text-decoration: none
-            border-bottom: 1px solid transparent
-            transition: ease-in-out all .3s
-            padding-bottom: 1px
+			&:hover
+				border-color: $delta
+				color: $delta
 
-            &:hover
-                border-color: $gama
+	> .footer-inner > .back-top
+		font-size: 1.3rem
+		color: $slate-400
+		text-decoration: none
+		transition: color 0.2s ease
+
+		&:hover
+			color: $delta

@@ -1,37 +1,125 @@
+.hero
+	position: relative
+	width: 100vw
+	margin-left: calc(50% - 50vw)
+	min-height: 88vh
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	padding: 8rem 2rem 6rem
+	overflow: hidden
+	background: linear-gradient(135deg, $slate-900 0%, $slate-800 40%, darken($teal-dark, 8%) 100%)
+
+	&::before
+		content: ""
+		position: absolute
+		inset: 0
+		background-image: radial-gradient(circle at 20% 50%, rgba($teal, 0.25) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba($teal-light, 0.15) 0%, transparent 40%)
+		background-size: auto, auto
+		background-position: center
+		opacity: 1
+		pointer-events: none
+
+	> .bg-texture
+		position: absolute
+		inset: 0
+		background-size: cover
+		background-position: center
+		opacity: 0.2
+		pointer-events: none
+
+	&::after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 120px
+		background: linear-gradient(to top, $slate-50, transparent)
+		pointer-events: none
+
+	> .content
+		position: relative
+		z-index: 2
+		max-width: 720px
+
+	> .content > .avatar-link
+		display: inline-block
+		margin-bottom: 2.4rem
+
+	> .content > .avatar-link > .selfie
+		width: 140px
+		height: 140px
+		object-fit: cover
+		border-radius: 50%
+		border: 4px solid rgba($white, 0.2)
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+		transition: transform 0.3s ease, box-shadow 0.3s ease
+
+		&:hover
+			transform: scale(1.05)
+			box-shadow: 0 12px 40px rgba($teal, 0.4)
+
+	> .content > .title
+		font-size: clamp(3.2rem, 6vw, 5rem)
+		color: $white
+		margin: 0 0 1rem
+		font-weight: 800
+		letter-spacing: -0.03em
+
+	> .content > .description
+		font-size: clamp(1.6rem, 2.5vw, 2rem)
+		font-weight: 400
+		color: rgba($white, 0.85)
+		margin: 0 auto 1.6rem
+		max-width: 540px
+		line-height: 1.5
+
+	> .content > .tagline
+		font-size: 1.5rem
+		color: rgba($white, 0.65)
+		margin-bottom: 3rem
+		font-weight: 400
+
+	> .content > .cta-group
+		display: flex
+		flex-wrap: wrap
+		gap: 1.2rem
+		justify-content: center
+		margin-bottom: 3.2rem
+
+	> .content > .cta-group > .btn
+		display: inline-flex
+		align-items: center
+		gap: 0.6rem
+		padding: 1.2rem 2.4rem
+		font-size: 1.5rem
+		font-weight: 600
+		border-radius: $radius-full
+		text-decoration: none
+		transition: all 0.2s ease
+
+		&.btn-primary
+			background: $teal
+			color: $white
+
+			&:hover
+				background: $teal-light
+				color: $white
+				transform: translateY(-2px)
+				box-shadow: 0 8px 24px rgba($teal, 0.4)
+
+		&.btn-ghost
+			background: rgba($white, 0.1)
+			color: $white
+			border: 1px solid rgba($white, 0.25)
+
+			&:hover
+				background: rgba($white, 0.2)
+				color: $white
+				transform: translateY(-2px)
+
+// Legacy header
 .header-home
-    display: block
-    margin: 0 auto
-    text-align: center
-    position: relative
-    z-index: 99
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center 
- 
-    > .link > .selfie
-        width: 125px
-        margin-bottom: 25px
-        border-radius: 100%
-        transition: all .2s
-        box-shadow: 0
-        opacity: 1
-
-        &:hover
-            box-shadow: 0 0px 4px 0 rgba(0,0,0,0.18), 0 0px 12px 0 rgba(0,0,0,0.15)
-            opacity: .8
-
-    > .title
-        font-size: 4rem
-        margin: 0 0 13px
-
-    > .description
-        font-size: 1.85rem
-        font-weight: 300
-        font-style: normal
-        color: #333333
-        width: 70%
-        margin: 0 auto 30px
-
-        // if you put some links in your bio. ;)
-        a
-            font-weight: 200
+	display: none

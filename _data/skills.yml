@@ -1,0 +1,9 @@
+categories:
+  - name: GIS & Data
+    items: [QGIS, PyQGIS, PostGIS, Cartography, Geodesy]
+  - name: Development
+    items: [Python, JavaScript, .NET, Java, PyQt]
+  - name: Web & Mapping
+    items: [Leaflet, OpenLayers, LuciadRIA, HTML, CSS]
+  - name: Infrastructure
+    items: [Git, Linux, PostgreSQL]

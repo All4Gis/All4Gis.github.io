@@ -1,25 +1,32 @@
+*, *::before, *::after
+	box-sizing: border-box
+
 body, html
 	font-size: 62.5%
+	scroll-behavior: smooth
 
 body
-	line-height: 1
-	font: 16px $fontSans
+	line-height: 1.6
+	font: 1.6rem/1.7 $fontSans
 	color: $alpha
+	background: $slate-50
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
 h1, h2, h3, h4
 	font-family: $fontSans
 	color: $beta
-	-webkit-font-smoothing: antialiased
-	text-rendering: optimizeLegibility
+	font-weight: 700
+	line-height: 1.25
+	letter-spacing: -0.02em
 
 h1
-	font-size: 3rem
-	letter-spacing: -1px
-	color: $beta
-	font-weight: 700
+	font-size: clamp(2.8rem, 5vw, 4.2rem)
 
 h2
-	font-size: 2.2rem
+	font-size: clamp(2.2rem, 3.5vw, 3rem)
+	margin-bottom: 1.6rem
 
 h3
 	font-size: 2rem
@@ -29,105 +36,94 @@ h4
 
 a
 	color: $delta
-	text-decoration: underline
+	text-decoration: none
+	transition: color 0.2s ease
+
+	&:hover
+		color: $teal-dark
 
 p
-	line-height: 1.7
+	line-height: 1.75
 	color: $alpha
-	font-weight: 300
-	margin-bottom: 20px
-	letter-spacing: 0.4px
-
-	@media #{$mobile}
-		letter-spacing: 0.2px
+	font-weight: 400
+	margin-bottom: 1.6rem
 
 strong
-	font-weight: 400
-	color: #000
+	font-weight: 600
+	color: $beta
 
-ul,
-ol
+ul, ol
+	padding-left: 2rem
+
 	li
-		line-height: 2.4rem
-		font-weight: 300
+		line-height: 1.8
 		color: $alpha
+		margin-bottom: 0.4rem
 
-img,
-pre,
-iframe
+img, pre, iframe
 	max-width: 100%
 
-img,
+img
+	border-radius: $radius-md
+
 pre
+	border-radius: $radius-sm
+	background: $slate-900
+	color: $slate-200
+	padding: 1.6rem
+	overflow-x: auto
+
+code, tt
+	font-family: $fontMonospace
+	font-size: 0.9em
+	background: $slate-100
+	padding: 0.15em 0.4em
 	border-radius: 4px
 
-figcaption
-	position: relative
-	top: -20px
-	left: 0
-	right: 0
-	margin: 0 auto
-	width: 100%
-	text-align: center
-	font-size: 1.3rem
-	color: $gama
-	font-weight: 300
-
-	@media #{$mobile}
-		font-size: 1.2rem
+pre code
+	background: none
+	padding: 0
 
 blockquote
-	padding-left: 15px
-	border-left: 3px solid #eee
+	padding: 1.2rem 2rem
+	border-left: 4px solid $delta
+	background: rgba($teal, 0.06)
+	border-radius: 0 $radius-sm $radius-sm 0
+	margin: 2rem 0
 
 hr
 	border: none
 	height: 1px
-	margin: 40px auto
-	background: #eee
+	margin: 4rem auto
+	background: $epsilon
 	width: 100%
-
-figure.highlight
-	width: 100%
-	margin: 0
-
-code,
-tt
-	padding: 1px 0
-	font-family: $fontMonospace
-	font-size: 12px
-	line-height: 20px
-	background: #fff
-	border-radius: 2px
-	border-radius: 2px
-
-pre
-	box-sizing: border-box
-	margin: 0 0 1.75em 0
-	width: 100%
-	padding: 5px 10px
-	font-family: $fontMonospace
-	font-size: 1.2rem
-	line-height: 2rem
-	overflow: auto
-	background: #fff
-	border: 1px solid $epsilon
-	border-radius: 2px
 
 .wrapper-normal,
 .wrapper-large
-	height: 100%
-	width: 96%
+	width: 92%
+	max-width: $max-width-wide
 	margin: 0 auto
 
-	@media #{$mobile}
-		width: 88%
-
-	@media #{$tablet}
-		width: 88%
-
 .wrapper-normal
-	max-width: 560px
+	max-width: $max-width
 
 .wrapper-large
-	max-width: 810px
+	max-width: $max-width-wide
+
+.section-label
+	display: inline-block
+	font-size: 1.2rem
+	font-weight: 600
+	text-transform: uppercase
+	letter-spacing: 0.12em
+	color: $delta
+	margin-bottom: 0.8rem
+
+.section-title
+	margin-bottom: 1.2rem
+
+.section-desc
+	font-size: 1.7rem
+	color: $slate-500
+	max-width: 56ch
+	margin-bottom: 3.2rem
